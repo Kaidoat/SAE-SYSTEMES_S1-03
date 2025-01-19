@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="./css/style.css">
+  <title>Commandes</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <!-- Lien pour Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <style>
+
+    .content {
+      flex: 1;
+      padding: 2rem 0;
+    }
+
+  </style>
+</head>
+<body class="body">
+<!-- Navbar avec icône Accueil -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+  <div class="container">
+    <!-- Icône Accueil -->
+    <a class="navbar-brand" href="index.html">
+      <i class="bi bi-house-door-fill"></i> <!-- Icône Bootstrap -->
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link" href="preambule.html">Préambule</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownUsage" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Utilisation MV
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdownUsage">
+            <li><a class="dropdown-item" href="commandes.html">Commandes utilisées</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="creationMV.html">Création MV</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownConfig" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Config. & Déploiement
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdownConfig">
+            <li><a class="dropdown-item" href="config.html">La configuration et déploiement</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Contenu de la page Préambule -->
+<div class="content container">
+  <div class="row">
+    <div class="col-lg-8 mx-auto">
+      <h1 class="text-center mb-4">Les différentes commandes utilisées</h1>
+      <p class="lead">
+        <br><u><b><strong>Création d'un compte administrateur</strong></u></b></br>
+      </p>
+      <p>
+        <br>Pour créer un compte administrateur, on utilise la commande sudo adduser adminGr06_Binome03, où "Gr06" représente le groupe 106 et "Binome03" le groupe numéro 3. Cependant, Linux impose des restrictions sur les caractères autorisés dans les noms d’utilisateurs.</br>
+        <br>Afin de contourner cette limitation et permettre la création du compte malgré ces caractères, il est nécessaire d’activer l’option --allow-bad-names en exécutant la commande sudo adduser --allow-bad-names suivi de adminGr06_Binome03. Cela force le système à accepter des noms d’utilisateurs qui ne respectent pas les conventions habituelles de Linux. Après avoir entré cette commande, le système demande de saisir un mot de passe pour l’utilisateur. Il faut le taper deux fois pour confirmation.</br>
+        <br>Ensuite, la configuration de l’administrateur se poursuit en renseignant les informations suivantes : nom, numéro de chambre, téléphone professionnel, téléphone personnel, ainsi que d’autres détails optionnels. Une fois toutes les informations saisies, le système demande de confirmer leur exactitude avant de finaliser la création du comptePour créer un compte administrateur, on utilise la commande sudo adduser adminGr06_Binome03, où "Gr06" représente le groupe 106 et "Binome03" le groupe numéro 3.</br>
+        <br>Cependant, Linux impose des restrictions sur les caractères autorisés dans les noms d’utilisateurs. Afin de contourner cette limitation et permettre la création du compte malgré ces caractères, il est nécessaire d’activer l’option --allow-bad-names en exécutant la commande sudo  adduser --allow-bad-names suivi de adminGr06_Binome03. Cela force le système à accepter des noms d’utilisateurs qui ne respectent pas les conventions habituelles de Linux. Après avoir entré cette commande, le système demande de saisir un mot de passe pour l’utilisateur. Il faut le taper deux fois pour confirmation.</br>
+        <br>Ensuite, la configuration de l’administrateur se poursuit en renseignant les informations suivantes : nom, numéro de chambre, téléphone professionnel, téléphone personnel, ainsi que d’autres détails optionnels. Une fois toutes les informations saisies, le système demande de confirmer leur exactitude avant de finaliser la création du compte.</br>
+        <a href="https://ibb.co/c2bWqdp"><img src="https://i.ibb.co/1RsCcxp/un.png" alt="un"></a>
+      </p>
+      <p>
+        <br>Ensuite, nous avons utilisé <strong>sudo usermod -aG sudo</strong> adminGr06_Binome03 pour ajouter le nouvel utilisateur au groupe sudo, lui permettant ainsi d'obtenir des privilèges administrateurs.</br>
+        <br>Ensuite, la commande <strong>su -adminGr06_Binome03</strong> a été utilisée pour se connecter avec ce nouvel administrateur et vérifier qu'il avait bien les permissions nécessaires.</br>
+        <br>Enfin, <strong>sudo apt update</strong> a été exécuté afin de mettre à jour la liste des paquets disponibles sur le système, garantissant ainsi l'accès aux versions les plus récentes des logiciels avant toute installation ou mise à jour.</br>
+        <a href="https://ibb.co/pbCDpKc"><img src="https://i.ibb.co/Dz3XnMh/deux.png" alt="deux"></a>
+      </p>
+      <p class="lead">
+        <br><b><strong>Création de deux utilisateurs BinomeYY_1 et BinomeYY_2</strong></b></br>
+      </p>
+      <p>
+        <br>Nous créeons les deux utilisateurs en utilisant la commande<strong>sudo adduser --allow bad-names</strong>, qui permet d'accepter des noms d'utilisateurs contenant des caractères normalement interdits par Linux.</br>
+        <br>Pour <strong>le premier utilisateur</strong>, nous exécutons :</br>
+        <br>sudo adduser --allow-bad-names Binome03_1</br>
+        <br>Pour <strong>le deuxième utilisateur :</strong></br>
+        <br>sudo adduser --allow-bad-names Binome03_2</br>
+      </p>
+      <p>
+        <br>Cette commande crée chaque utilisateur en demandant un mot de passe, puis des informations supplémentaires comme le nom complet, le numéro de téléphone, et la chambre.</br>
+        <br>Une fois la création terminée, les deux utilisateurs peuvent être utilisés normalement sur le système.</br>
+        <a href="https://imgbb.com/"><img src="https://i.ibb.co/93D6DVR/trois.png" alt="trois" ></a>
+      </p>
+      <p>
+        <br>Pour vérifier que les utilisateurs ont bien été créés, on peut utiliser la commande <strong>cat/etc/passwd | grep Binome03</strong></br>
+        <br>La première partie de la commande, cat/etc/passwd, permet d'afficher le contenu du fichier /etc/passwd qui contient la liste de tous les utilisateurs enregistrés sur le système.</br>
+        <br>Ensuite, le symbole "|" est utilisé pour envoyer cette sortie à une autre commande. Ici, on utilise grep Binome03, qui permet de filtrer les résultats et d'afficher uniquement les lignes contenant "Binome03"</br>
+        <br>Cela permet de s'assurer rapidement que les utilisateurs ont bien été créés en verifiant leur présence dans le fichier.</br>
+        <a href="https://ibb.co/gmmVLpZ"><img src="https://i.ibb.co/HBBdfsT/quatre.png" alt="quatre"></a>
+      </p>
+      <p class="lead">
+        <b><strong>Création d'un groupe</strong></b>
+      </p>
+      <p>
+        Afin de créer un groupe nous utilisons la commande <strong>sudo groupadd Binome03</strong>
+        <a href="https://imgbb.com/"><img src="https://i.ibb.co/0fK8zhw/cinq.png" alt="cinq"></a>
+      </p>
+      <p>
+        <br>Pour vérifier que le groupe a bien été créé après l'exécution de la commande sudo groupadd Binome03, on peut soit consulter le fichier /etc/group, soit afficher la liste complète des groupes du système.</br>
+        <br>La première méthode consiste à rechercher le groupe directement dans le fichier en utilisant la commande cat/etc/group | grp Binome03.</br>
+        <br>Si le groupe existe, il apparaîtra dans la sortie. La seconde méthode permet d'afficher la liste complète des groupes enregistrés sur le système avec la commande getent groupe, et si l'on souhaite filtrer un groupe spécifique, on peut utiliser getent group Binome03. Si le groupe est bien présent, la ligne correspondante s'affichera, confirmant ainsi sa création.</br>
+        <br>Voici les résultats ci-dessous : </br>
+        <a href="https://ibb.co/9yjmpSM"><img src="https://i.ibb.co/ssrpgzB/six.png" alt="six"></a>
+      </p>
+      <p>
+        <br>Pour ajouter un utilisateur à un groupe sous Linux, on utilise la commande usermod -aG, où -a signifie "ajouter" sans supprimer les autres groupes de l'utilisateur, et -G spécifie le groupe cible. </br>
+        <br>Par exemple, pour ajouter l’utilisateur Binome03_1 au groupe Binome03, on exécute sudo usermod -aG Binome03 Binome03_1. On répète la commande pour tout autre utilisateur à ajouter.</br>
+        <br>Une fois l’opération effectuée, il est important de vérifier que l’utilisateur a bien été ajouté au groupe. Pour cela, on peut utiliser groups Binome03_1, qui affichera la liste des groupes auxquels l’utilisateur appartient.</br>
+        <br>Une autre méthode consiste à rechercher directement le groupe dans le fichier /etc/group avec grep Binome03 /etc/group. Cette commande affichera la ligne du groupe et la liste des utilisateurs qui y sont associés, confirmant ainsi l’ajout correct de l’utilisateur. </br>
+        <a href="https://ibb.co/BVxmsty"><img src="https://i.ibb.co/KjkYyX2/sept.png" alt="sept"></a>
+      </p>
+      <p class="lead">
+        <b><strong>Personnalisation d'une invite de commande</strong></b>
+      </p>
+      <p>
+        <br>On crée une variable PS1 qui contient toute la configuration requise pour l'invite bash, on pourra stocker celle-ci dans une autre variable afin de la restaurer par défaut.
+      </p>
+      <a href="https://imgbb.com/"><img src="https://i.ibb.co/pJLNyYZ/huit.png" alt="huit"></a>
+      <a href="https://ibb.co/S3CKp1g"><img src="https://i.ibb.co/MC0RLjH/neuf.png" alt="neuf"></a>
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container">
+    <p class="mb-0">Membres du groupe :</p>
+    <p class="mb-0">
+      <a href="#">BATTACHI Rida</a> |
+      <a href="#">FOURRA Ismail</a> |
+      <a href="#">BENNANI Fares</a>
+    </p>
+  </div>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>

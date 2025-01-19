@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="./css/style.css">
+  <title>ConfigMV</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <!-- Lien pour Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <style>
+
+    .content {
+      flex: 1;
+      padding: 2rem 0;
+    }
+
+  </style>
+</head>
+<body class="body">
+<!-- Navbar avec icône Accueil -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+  <div class="container">
+    <!-- Icône Accueil -->
+    <a class="navbar-brand" href="index.html">
+      <i class="bi bi-house-door-fill"></i> <!-- Icône Bootstrap -->
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link" href="preambule.html">Préambule</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownUsage" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Utilisation MV
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdownUsage">
+            <li><a class="dropdown-item" href="commandes.html">Commandes utilisées</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="creationMV.html">Création MV</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownConfig" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Config. & Déploiement
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdownConfig">
+            <li><a class="dropdown-item" href="config.html">La configuration et déploiement</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Contenu de la page Préambule -->
+<div class="content container">
+  <div class="row">
+    <div class="col-lg-8 mx-auto">
+      <h1 class="text-center mb-4">La configuration de notre machine</h1>
+      <p class="lead">
+        <br>Le déploiement d’un site web commence par l’installation et la configuration d’Apache, qui servira de serveur web. Pour cela, il faut d’abord mettre à jour le système avec sudo apt update, puis installer Apache via sudo apt install apache2. Une fois installé, le service démarre automatiquement et peut être vérifié avec sudo systemctl status apache2. Si nécessaire, il peut être activé avec sudo systemctl start apache2 et lancé au démarrage avec sudo systemctl enable apache2. L’accès à la page par défaut d’Apache via http://192.128.1.13 permet de confirmer son bon fonctionnement.</br>
+
+        <br>Ensuite, il faut créer un dossier pour héberger le site en exécutant mkdir -p ~/monsite.fr. Apache doit être configuré pour pointer vers ce dossier en modifiant le fichier /etc/apache2/sites-enabled/000-default.conf via sudo nano /etc/apache2/sites-enabled/000-default.conf, puis en remplaçant DocumentRoot /var/www/html par DocumentRoot /home/admin_Gr06_Binome03/monsite.fr. Après enregistrement (Ctrl+X, Y, Entrée), Apache doit être rechargé avec sudo systemctl reload apache2.</br>
+
+        <br>Pour garantir l’accès au site, il faut ajuster les permissions en attribuant la propriété des fichiers à Apache avec sudo chown -R www-data:www-data ~/monsite.fr, et définir les droits d’accès avec sudo chmod -R 755 ~/monsite.fr. En cas de problème, on peut temporairement élargir les permissions avec sudo chmod -R 777 ~/monsite.fr.</br>
+
+        <br>Le déploiement avec WebStorm se fait en configurant une connexion SFTP dans Tools > Deployment > Configuration, en utilisant admin_Gr06_Binome03 comme utilisateur et en définissant /home/admin_Gr06_Binome03/monsite.fr comme Remote Root Path. L’option Automatic Upload permet de transférer automatiquement les fichiers.</br>
+
+        <br>Enfin, les fichiers HTML et CSS sont créés dans WebStorm et envoyés sur le serveur via Deployment > Upload to admin_Gr06_Binome03. L’affichage du site peut être testé en visitant http://192.168.1.13 depuis un navigateur. Cette méthode assure une mise en ligne rapide et efficace du site.</br>
+      </p>
+      <p>
+        <br>Cette configuration WebStorm permet le déploiement SFTP du projet vers le serveur distant en utilisant l’utilisateur rida et le chemin /home/rida/monsite.fr. Le bouton Test Connection permet de vérifier l’accès SSH, mais l’URL du serveur web reste à renseigner. L’option Rsync est désactivée, mais pourrait être activée pour améliorer la synchronisation des fichiers.</br>
+        <a href="https://ibb.co/bLM7PBX"><img src="https://i.ibb.co/ZKpNV8x/image.png" alt="1"></a>
+      <p>
+      <br>Le répertoire monsite.fr, hébergé sur notre machine virtuelle, regroupe l’ensemble des fichiers HTML et CSS constituant l’architecture de notre site web.</br>
+      <a href="https://ibb.co/qBc1d17"><img src="https://i.ibb.co/xhB5D5X/2.png" alt="2"></a>
+      </p>
+      <p>
+        Voici un résultat du déploiement de notre site web.
+        <a href="https://ibb.co/mcZpQ1H"><img src="https://i.ibb.co/HHwZm1r/3.png" alt="3"></a>
+      </p>
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container">
+    <p class="mb-0">Membres du groupe :</p>
+    <p class="mb-0">
+      <a href="#">BATTACHI Rida</a> |
+      <a href="#">FOURRA Ismail</a> |
+      <a href="#">BENNANI Fares</a>
+    </p>
+  </div>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>

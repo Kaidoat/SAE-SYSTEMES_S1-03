@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="./css/style.css">
+  <title>Préambule</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <!-- Lien pour Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <style>
+
+    .content {
+      flex: 1;
+      padding: 2rem 0;
+    }
+
+    .footer {
+      background-color: #343a40;
+      color: white;
+      padding: 1rem 0;
+      text-align: center;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+
+    .footer a {
+      color: #f8f9fa;
+      text-decoration: none;
+    }
+
+    .footer a:hover {
+      color: #adb5bd;
+    }
+  </style>
+</head>
+<body class="body">
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">
+      <i class="bi bi-house-door-fill"></i>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link" href="preambule.html">Préambule</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownUsage" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Utilisation MV
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdownUsage">
+            <li><a class="dropdown-item" href="commandes.html">Commandes utilisées</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="creationMV.html">Création MV</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownConfig" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Config. & Déploiement
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdownConfig">
+            <li><a class="dropdown-item" href="config.html">La configuration et déploiement</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="content container">
+  <div class="row">
+    <div class="col-lg-8 mx-auto">
+      <h1 class="text-center mb-4">Préambule</h1>
+      <p class="lead">
+        <br><strong>Definition d'une VM</strong></br>
+      </p>
+      <p>
+        La virtualisation est une technologie permettant de créer des représentations virtuelles de ressources physiques telles que les serveurs, le stockage et les réseaux. Grâce à un logiciel appelé hyperviseur, elle crée une séparation entre le matériel physique et les environnements virtuels, permettant d'exécuter plusieurs machines virtuelles sur un seul ordinateur physique. En imitant les fonctions du matériel, la virtualisation optimise l'utilisation des ressources et offre une indépendance vis-à-vis de l’infrastructure matérielle, rendant les systèmes virtuels compatibles avec différentes configurations et systèmes d'exploitation. Les entreprises l’utilisent pour améliorer l’efficacité de leur infrastructure informatique et maximiser le rendement de leurs investissements. De plus, elle joue un rôle clé dans le cloud computing, facilitant la gestion des infrastructures et des services informatiques.
+      </p>
+      <p class="lead">
+        <strong>Différence entre émulateur, simulateur et outil de virtualisation.</strong>
+      </p>
+      <p>
+        <br>Les émulateurs, les simulateurs et les outils de virtualisation sont trois technologies informatiques différentes, bien que souvent confondues.</br>
+      </p>
+      <p>
+        <br><strong>Un émulateur</strong> a pour but de reproduire exactement le fonctionnement d’un autre système, qu’il soit matériel ou logiciel. Il permet d’exécuter des applications ou programmes conçus pour une autre plateforme. Par exemple, un émulateur peut faire fonctionner des jeux d’une console sur un PC ou simuler l’architecture d’un processeur différent. L’émulation est donc une copie fidèle du système d’origine, ce qui la rend souvent plus gourmande en ressources.</br>
+      </p>
+      <p>
+        <br><strong>Un simulateur</strong>, lui, ne cherche pas à exécuter le code réel d’un système, mais à modéliser son comportement de manière approximative. Il est utilisé pour tester, apprendre ou expérimenter. Par exemple, un simulateur de vol reproduit les conditions de pilotage sans nécessiter un vrai avion, et un simulateur réseau permet d’observer le comportement d’un réseau sans le construire physiquement. Contrairement à l’émulation, la simulation ne cherche pas à être parfaitement fidèle, mais à donner une approximation suffisante pour analyser le fonctionnement d’un système.</br>
+      </p>
+      <p>
+        <br>Enfin, <strong>un outil de virtualisation</strong> permet d’exécuter plusieurs systèmes d’exploitation ou environnements sur une seule machine physique, en partageant ses ressources matérielles. Contrairement à l’émulation, la virtualisation ne tente pas de recréer un autre système, mais optimise l’utilisation des ressources pour faire fonctionner plusieurs environnements en parallèle. C’est une technologie clé en informatique, surtout pour les serveurs, le développement et le cloud computing.</br>
+      </p>
+      <p>
+      <ol>
+        <li>L’émulation = Reproduit un système à l’identique pour exécuter des logiciels conçus pour une autre plateforme. </li>
+        <li>La simulation = Imite un comportement pour tester et observer sans exécuter réellement le système.</li>
+        <li>La virtualisation = Permet de faire tourner plusieurs systèmes en même temps sur un même matériel, sans recréer un autre environnement. </li>
+      </ol>
+      </p>
+      <p>Types de virtualisation pour VirtualBox, VMware Workstation et Stratus :</p>
+      <table>
+        <thead>
+        <tr>
+          <th>.</th>
+          <th>Logiciel</th>
+          <th>Type principal de virtualisation</th>
+          <th>Cas d'utilisation</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <td>1.</td>
+          <td>VirtualBox</td>
+          <td>Virtualisation complète (Hyperviseur Type 2, OS, stockage)</td>
+          <td>Bureautique, tests, développement</td>
+        </tr>
+        <tr>
+          <td>2.</td>
+          <td>VMware Workstation</td>
+          <td>Virtualisation avancée (Hyperviseur Type 2, réseau, GPU)</td>
+          <td>Environnements professionnels, développement, test d’applications</td>
+        </tr>
+        <tr>
+          <td>3.</td>
+          <td>Stratus</td>
+          <td>Virtualisation haute disponibilité (Tolérance aux pannes)</td>
+          <td>Systèmes critiques, industrie, finance</td>
+        </tr>
+        </tbody>
+      </table>
+      <p class="lead">
+        <strong>Forme/lieu de sauvegarde de la machine virtuelle créée ?</strong>
+      </p>
+      <p>
+        <br>Nous avons choisi un NAS(Network Attached Storage) car il permet de stocker et partager des fichiers de machines virtuelles sur un réseau local via NFS, SMB/CIFS ou ISCSI. Cela facilite l'accès aux VM depuis plusieurs machines tout en assurant une meilleure sécurité grâce au RAID, qui protège contre la perte de données.</br>
+      </p>
+      <p>
+        <br>Cependant, cette solution dépend de la qualité du réseau : une connexion lente ou une panne peut limiter l'accès aux fichiers. Malgré cet inconvénient, le NAS reste une option efficace pour centraliser et gérer le stockage des VM</br>
+      </p>
+    </div>
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="mb-0">Membres du groupe :</p>
+    <p class="mb-0">
+      <a href="#">BATTACHI Rida</a> |
+      <a href="#">FOURRA Ismail</a> |
+      <a href="#">BENNANI Fares</a>
+    </p>
+  </div>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
